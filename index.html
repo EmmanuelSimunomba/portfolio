@@ -332,7 +332,7 @@
         <header class="header">
             <div class="header-content">
                 <h1 class="name">Emmanuel Simunomba</h1>
-                <h2 class="title">Software Developer & Bioinformatics Student</h2>
+                <h2 class="title">BSc Bioinformatics (Year 3) · The Copperbelt University</h2>
                 
                 <div class="contact-info">
                     <div class="contact-item">
@@ -341,7 +341,7 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <span>+260 767 479 885</span>
+                        <span>+260 979 144 995 | +260 767 479 885</span>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-linkedin"></i>
@@ -349,7 +349,7 @@
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-github"></i>
-                        <span><a href="https://emmanuelsimunomba0-droid.github.io/html-resume/">github.com/emmanuelsimunomba0-droid</a></span>
+                        <span><a href="https://EmmanuelSimunomba.github.io/html-resume/">github.com/EmmanuelEimunomba</a></span>
                     </div>
                 </div>
             </div>
@@ -365,14 +365,7 @@
                 <section class="section">
                     <h2 class="section-title"><i class="fas fa-user"></i> Professional Summary</h2>
                     <p class="summary-text">
-                        A highly motivated 3rd-year university student with strong foundations 
-                        in software development, system architecture, and problem-solving. Proven 
-                        ability to design, build, and deploy full-stack web applications and robust 
-                        backend systems. Currently leading development of a comprehensive management 
-                        system for a client institution, combining technical expertise in Java, 
-                        modern web frameworks, and database management. Seeking to apply analytical 
-                        skills and development prowess to solve complex challenges in software engineering, 
-                        data-driven applications, and system automation.
+                        Third-year BSc Bioinformatics student at The Copperbelt University with demonstrated experience in genomic surveillance, bioinformatics workflow development, and AI-assisted biological data analysis. Developed reproducible malaria variant-calling pipelines and currently leading the development of Z-Prime AI, a primer design and pathogen surveillance platform optimised for resource-constrained laboratory environments. Seeking an attachment at CIDRZ to contribute computational biology, genomics, and software engineering skills to world-class infectious disease research.
                     </p>
                 </section>
 
@@ -380,11 +373,17 @@
                 <section class="section">
                     <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
                     <div class="education-item">
-                        <div class="education-title">Bachelor of Science in Bioinformatics</div>
-                        <div class="education-subtitle">The Copperbelt University, Kitwe, Zambia</div>
-                        <div class="education-duration">Expected Graduation: 2028</div>
-                        <p><em>Program provides strong computational, algorithmic, and data analysis fundamentals applicable to general software development.</em></p>
-                        <p style="margin-top: 10px;"><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Database Management, Programming, Statistics, Molecular Biology</p>
+                        <div class="education-title">Bachelor of Science in Biology (Bioinformatics)</div>
+                        <div class="education-subtitle">The Copperbelt University, School of Mathematics and Natural Sciences — Kitwe, Zambia</div>
+                        <div class="education-duration">2022 – Present · Expected Graduation: 2027</div>
+                        <p><em>Third-year student on track for final-year project completion and graduation in 2027.</em></p>
+                        <p style="margin-top: 10px;"><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Molecular Biology, Statistics, Genomics, Database Management, Programming</p>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-title">Zambia School Certificate (Grade 10–12)</div>
+                        <div class="education-subtitle">St. Columba's Secondary School — Lukulu, Western Province</div>
+                        <div class="education-duration">2019 – 2021</div>
+                        <p>Graduated with complete School Certificate; served as elected School Prefect (2020–2021).</p>
                     </div>
                 </section>
 
@@ -394,35 +393,40 @@
                     
                     <div class="project-item">
                         <div class="project-title">
-                            Sancta Maria College Management System
+                            Z-Prime AI — Primer Design & Genomic Surveillance Platform
                             <span class="project-status">In Development</span>
                         </div>
                         <p class="project-description">
-                            Leading the development of a comprehensive management system to digitize administrative processes, 
-                            student records, and academic reporting for Sancta Maria College.
+                            Leading development of a Python-based AI-assisted primer design platform optimised for resource-constrained laboratory environments. Implements nearest-neighbour Tm calculations, hairpin ΔG, and self-dimer evaluation. Features a dual-path AI layer combining the Claude API (online) and locally hosted Ollama instances (offline) for field use in power- or internet-disrupted settings. Includes diagnostic validation modules for Vibrio cholerae and Mycobacterium tuberculosis. CLI engine complete; Streamlit web interface in progress.
                         </p>
+                        <div style="font-size:0.85rem; color: var(--gray-color); margin-bottom:8px;">Undergraduate Research Project, The Copperbelt University · 2026 – Present</div>
                         <div class="tech-stack">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">REST APIs</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Claude API</span>
+                            <span class="tech-tag">Ollama</span>
+                            <span class="tech-tag">Streamlit</span>
                             <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Bioinformatics</span>
                         </div>
                     </div>
 
                     <div class="project-item">
-                        <div class="project-title">Personal Portfolio Website</div>
+                        <div class="project-title">
+                            Malaria Genomic Surveillance Pipeline
+                            <span class="project-status" style="background:#bfdbfe; color:#1e40af;">Completed</span>
+                        </div>
                         <p class="project-description">
-                            Designed and developed a responsive portfolio website with blog functionality, 
-                            project showcase, and contact form.
+                            Built an end-to-end variant-calling pipeline to track K13 artemisinin resistance mutations in Plasmodium falciparum isolates. Includes rigorous QC, deep sequence alignment, depth-aware variant filtering (QUAL ≥ 30, DP ≥ 10), and automated clinical annotation. Packaged with Docker for cross-platform reproducibility and validated using public datasets from the European Nucleotide Archive (ENA).
                         </p>
+                        <div style="font-size:0.85rem; color: var(--gray-color); margin-bottom:8px;">Bioinformatics Development Project, The Copperbelt University · 2025 – 2026</div>
                         <div class="tech-stack">
-                            <span class="tech-tag">HTML/CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Express.js</span>
-                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">BWA-MEM</span>
+                            <span class="tech-tag">SAMtools</span>
+                            <span class="tech-tag">BCFtools</span>
+                            <span class="tech-tag">FastQC</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">VCF Analysis</span>
                         </div>
                     </div>
                 </section>
@@ -435,63 +439,60 @@
                     <h2 class="section-title"><i class="fas fa-cogs"></i> Technical Skills</h2>
                     <div class="skills-grid">
                         <div class="skill-category">
-                            <h4>Programming Languages</h4>
+                            <h4>Programming</h4>
                             <div class="skill-tags">
-                                <span class="skill-tag">Java</span>
-                                <span class="skill-tag">C++</span>
-                                <span class="skill-tag">JavaScript</span>
                                 <span class="skill-tag">Python</span>
-                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">Bash</span>
+                                <span class="skill-tag">R (learning)</span>
                             </div>
                         </div>
                         
                         <div class="skill-category">
-                            <h4>Web Development</h4>
+                            <h4>Bioinformatics Tools</h4>
                             <div class="skill-tags">
-                                <span class="skill-tag">HTML5</span>
-                                <span class="skill-tag">CSS3</span>
-                                <span class="skill-tag">Node.js</span>
-                                <span class="skill-tag">React</span>
-                                <span class="skill-tag">Express.js</span>
-                                <span class="skill-tag">REST APIs</span>
+                                <span class="skill-tag">BWA-MEM</span>
+                                <span class="skill-tag">SAMtools</span>
+                                <span class="skill-tag">BCFtools</span>
+                                <span class="skill-tag">FastQC</span>
+                                <span class="skill-tag">fastp</span>
+                                <span class="skill-tag">seqtk</span>
+                                <span class="skill-tag">VCF Analysis</span>
                             </div>
                         </div>
                         
                         <div class="skill-category">
-                            <h4>Database Management</h4>
+                            <h4>AI & LLMs</h4>
                             <div class="skill-tags">
-                                <span class="skill-tag">PostgreSQL</span>
-                                <span class="skill-tag">MySQL</span>
-                                <span class="skill-tag">Database Design</span>
-                                <span class="skill-tag">Normalization</span>
+                                <span class="skill-tag">Claude API</span>
+                                <span class="skill-tag">Ollama</span>
+                                <span class="skill-tag">Prompt Engineering</span>
                             </div>
                         </div>
                         
                         <div class="skill-category">
-                            <h4>Tools & Platforms</h4>
+                            <h4>DevOps & Tools</h4>
                             <div class="skill-tags">
                                 <span class="skill-tag">Git</span>
                                 <span class="skill-tag">GitHub</span>
-                                <span class="skill-tag">IntelliJ IDEA</span>
-                                <span class="skill-tag">Eclipse</span>
-                                <span class="skill-tag">VS Code</span>
-                                <span class="skill-tag">Microsoft Office</span>
-                                <span class="skill-tag">Agile/Scrum</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">Conda/Miniconda</span>
+                                <span class="skill-tag">Streamlit</span>
+                                <span class="skill-tag">Linux/Ubuntu</span>
+                                <span class="skill-tag">Snakemake (learning)</span>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- Certifications -->
+                <!-- Work Experience -->
                 <section class="section">
-                    <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications</h2>
+                    <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
                     <div class="certification-item">
-                        <div class="cert-title">The Complete 2024 Web Development Bootcamp</div>
-                        <div class="cert-subtitle">Udemy (Angela Yu) | 2024</div>
+                        <div class="cert-title">Census Enumerator</div>
+                        <div class="cert-subtitle">Zambia Statistics Agency (ZamStats) · 2022</div>
                         <ul class="cert-details">
-                            <li>Front-End & Back-End Development</li>
-                            <li>Databases & Deployment</li>
-                            <li>REST APIs & Web Security</li>
+                            <li>Door-to-door digital household data collection under national data integrity protocols</li>
+                            <li>Maintained data compliance and engaged communities for high survey response quality</li>
                         </ul>
                     </div>
                 </section>
@@ -500,14 +501,14 @@
                 <section class="section">
                     <h2 class="section-title"><i class="fas fa-star"></i> Core Competencies</h2>
                     <div class="skill-tags" style="margin-top: 10px;">
-                        <span class="skill-tag">Full-Stack Development</span>
+                        <span class="skill-tag">Genomic Surveillance</span>
+                        <span class="skill-tag">Pipeline Development</span>
+                        <span class="skill-tag">NGS Analysis</span>
+                        <span class="skill-tag">AI Integration</span>
                         <span class="skill-tag">Problem Solving</span>
-                        <span class="skill-tag">System Architecture</span>
-                        <span class="skill-tag">Project Management</span>
-                        <span class="skill-tag">Client Communication</span>
-                        <span class="skill-tag">Agile Development</span>
-                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Reproducible Research</span>
                         <span class="skill-tag">Technical Documentation</span>
+                        <span class="skill-tag">Leadership</span>
                     </div>
                 </section>
             </div>
@@ -519,7 +520,7 @@
             <p style="margin-top: 10px;">
                 <a href="mailto:emmanuelsimunomba0@gmail.com">Email</a> |
                 <a href="https://linkedin.com/in/emmanuel-simunomba">LinkedIn</a> |
-                <a href="https://github.com/yourusername">GitHub</a> |
+                <a href="https://github.com/emmanuelsimunomba0-droid">GitHub</a> |
                 <a href="#" onclick="window.print()">Print Resume</a>
             </p>
         </footer>
