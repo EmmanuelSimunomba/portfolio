@@ -3,569 +3,527 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emmanuel Simunomba - Resume</title>
+    <title>Emmanuel Simunomba - Bioinformatics Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Modern CSS Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --dark-color: #1e293b;
-            --light-color: #f8fafc;
-            --gray-color: #64748b;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
+            --navy:    #1B2A4A;
+            --teal:    #1A7A6E;
+            --teal-lt: #E8F5F3;
+            --teal-md: #C5E8E3;
+            --gold:    #C8960C;
+            --slate:   #2C3E50;
+            --grey:    #64748b;
+            --light:   #F7F9F9;
+            --white:   #FFFFFF;
+            --radius:  8px;
+            --shadow:  0 4px 12px rgba(0,0,0,0.10);
+            --trans:   all 0.25s ease;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--dark-color);
-            background-color: #f1f5f9;
-            padding: 20px;
+            background: #eef2f7;
+            color: var(--slate);
+            padding: 24px;
+            line-height: 1.65;
         }
 
-        .resume-container {
-            max-width: 1000px;
+        .resume {
+            max-width: 1060px;
             margin: 0 auto;
-            background: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
             overflow: hidden;
         }
 
-        /* Header Styles */
+        /* ── HEADER ──────────────────────────────────────────────────────── */
         .header {
-            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
-            color: white;
-            padding: 30px 40px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: var(--white);
+            padding: 36px 44px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 28px;
             flex-wrap: wrap;
-            gap: 20px;
         }
 
-        .header-content {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid white;
-            object-fit: cover;
-            box-shadow: var(--box-shadow);
-        }
+        .header-content { flex: 1; min-width: 280px; }
 
         .name {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 5px;
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
         }
 
         .title {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 300;
-            opacity: 0.9;
-            margin-bottom: 15px;
+            opacity: 0.88;
+            margin-bottom: 18px;
+            border-left: 3px solid var(--gold);
+            padding-left: 12px;
         }
 
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 10px;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: 10px 24px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
         }
 
-        .contact-item i {
-            color: #93c5fd;
+        .contact-item i { color: var(--teal-md); width: 16px; }
+        .contact-item a { color: var(--white); text-decoration: none; }
+        .contact-item a:hover { text-decoration: underline; }
+
+        .profile-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
         }
 
-        .contact-item a {
-            color: white;
-            text-decoration: none;
+        .profile-img {
+            width: 130px; height: 130px;
+            border-radius: 50%;
+            border: 4px solid var(--teal-md);
+            object-fit: cover;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.25);
         }
 
-        .contact-item a:hover {
-            text-decoration: underline;
+        .status-badge {
+            background: var(--gold);
+            color: #fff;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
         }
 
-        /* Main Content Layout */
-        .main-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-            padding: 30px;
-        }
+        /* ── LAYOUT ──────────────────────────────────────────────────────── */
+        .main { display: grid; grid-template-columns: 2fr 1fr; gap: 32px; padding: 32px; }
 
-        @media (max-width: 768px) {
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-        }
+        @media (max-width: 760px) { .main { grid-template-columns: 1fr; } }
 
-        /* Section Styling */
-        .section {
-            margin-bottom: 30px;
-        }
+        /* ── SECTIONS ────────────────────────────────────────────────────── */
+        .section { margin-bottom: 32px; }
 
         .section-title {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid var(--primary-color);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--teal);
+            border-bottom: 2px solid var(--teal);
+            padding-bottom: 6px;
+            margin-bottom: 16px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
         }
 
-        .section-title i {
-            font-size: 1.2rem;
-        }
+        .section-title i { font-size: 1rem; }
 
-        /* Summary Section */
+        /* ── SUMMARY ─────────────────────────────────────────────────────── */
         .summary-text {
+            font-size: 0.97rem;
+            line-height: 1.75;
             text-align: justify;
-            font-size: 1.05rem;
-            line-height: 1.7;
+            color: var(--slate);
         }
 
-        @media (max-width: 600px) {
-            .summary-text {
-                text-align: left;
-            }
+        /* ── EDUCATION ───────────────────────────────────────────────────── */
+        .edu-item {
+            padding: 15px 18px;
+            background: var(--light);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--teal);
+            margin-bottom: 14px;
         }
 
-        /* Education Section */
-        .education-item {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: var(--light-color);
-            border-radius: var(--border-radius);
-            border-left: 4px solid var(--primary-color);
-        }
+        .edu-title { font-weight: 700; font-size: 1rem; margin-bottom: 3px; }
+        .edu-sub { color: var(--teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 3px; }
+        .edu-date { color: var(--grey); font-size: 0.84rem; margin-bottom: 8px; }
 
-        .education-title {
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-
-        .education-subtitle {
-            color: var(--primary-color);
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-
-        .education-duration {
-            color: var(--gray-color);
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-
-        .skill-category {
-            margin-bottom: 15px;
-        }
-
-        .skill-category h4 {
-            margin-bottom: 8px;
-            color: var(--dark-color);
-            font-size: 1.1rem;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-tag {
-            background: #dbeafe;
-            color: var(--primary-color);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .skill-tag:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* Certifications */
-        .certification-item {
-            padding: 15px;
-            background: var(--light-color);
-            border-radius: var(--border-radius);
-            margin-bottom: 15px;
-            border-left: 4px solid #10b981;
-        }
-
-        .cert-title {
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .cert-subtitle {
-            color: var(--gray-color);
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-        }
-
-        .cert-details {
-            font-size: 0.9rem;
-            margin-top: 8px;
-            padding-left: 15px;
-        }
-
-        /* Projects Section (New) */
+        /* ── PROJECTS ────────────────────────────────────────────────────── */
         .project-item {
             padding: 20px;
-            background: var(--light-color);
-            border-radius: var(--border-radius);
+            background: var(--light);
+            border-radius: var(--radius);
+            border: 1px solid #dce8e6;
             margin-bottom: 20px;
-            border: 1px solid #e2e8f0;
-            transition: var(--transition);
+            transition: var(--trans);
         }
 
         .project-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(26,122,110,0.12);
+            border-color: var(--teal);
         }
 
-        .project-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--dark-color);
-            margin-bottom: 8px;
+        .project-header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
         }
 
-        .project-status {
-            background: #fbbf24;
-            color: #78350f;
-            padding: 3px 10px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
+        .project-title { font-size: 1.05rem; font-weight: 700; color: var(--navy); }
+        .project-sub { font-size: 0.82rem; color: var(--grey); margin-bottom: 10px; }
+        .project-desc { font-size: 0.92rem; line-height: 1.7; margin-bottom: 12px; }
+
+        .badge {
+            padding: 3px 11px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            white-space: nowrap;
         }
 
-        .project-description {
-            margin-bottom: 15px;
-        }
+        .badge-active   { background: #fef3c7; color: #92400e; }
+        .badge-complete { background: var(--teal-lt); color: var(--teal); }
 
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 10px;
-        }
+        .tags { display: flex; flex-wrap: wrap; gap: 7px; }
 
         .tech-tag {
             background: #dcfce7;
             color: #166534;
-            padding: 4px 10px;
-            border-radius: 15px;
+            padding: 3px 10px;
+            border-radius: 14px;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
+        /* ── CERTIFICATIONS ──────────────────────────────────────────────── */
+        .cert-item {
+            padding: 14px 16px;
+            background: var(--light);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--gold);
+            margin-bottom: 13px;
+        }
+
+        .cert-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 3px; }
+        .cert-sub { color: var(--grey); font-size: 0.84rem; margin-bottom: 4px; }
+        .cert-no { font-size: 0.8rem; color: var(--teal); font-weight: 600; }
+
+        /* ── SKILLS ──────────────────────────────────────────────────────── */
+        .skill-group { margin-bottom: 16px; }
+        .skill-group h4 { font-size: 0.9rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+
+        .skill-tag {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 4px 11px;
+            border-radius: 16px;
             font-size: 0.8rem;
-            font-weight: 500;
+            font-weight: 600;
+            transition: var(--trans);
         }
 
-        /* Footer */
-        .footer {
+        .skill-tag:hover { background: var(--teal); color: var(--white); transform: translateY(-2px); }
+
+        /* ── WORK EXP ────────────────────────────────────────────────────── */
+        .work-item {
+            padding: 14px 16px;
+            background: var(--light);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--navy);
+            margin-bottom: 13px;
+        }
+
+        .work-title { font-weight: 700; font-size: 0.95rem; }
+        .work-sub { color: var(--grey); font-size: 0.84rem; margin-bottom: 8px; }
+        .work-list { padding-left: 16px; font-size: 0.88rem; }
+        .work-list li { margin-bottom: 4px; }
+
+        /* ── STATS BAR ───────────────────────────────────────────────────── */
+        .stats-bar {
+            background: linear-gradient(135deg, var(--navy), var(--teal));
+            padding: 20px 44px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .stat { text-align: center; color: var(--white); }
+        .stat-num { font-size: 1.8rem; font-weight: 800; color: var(--gold); }
+        .stat-label { font-size: 0.78rem; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.4px; }
+
+        /* ── FOOTER ──────────────────────────────────────────────────────── */
+        footer {
+            background: var(--navy);
+            color: var(--white);
             text-align: center;
-            padding: 20px;
-            background: var(--dark-color);
-            color: white;
-            font-size: 0.9rem;
+            padding: 18px;
+            font-size: 0.85rem;
         }
 
-        .footer a {
-            color: #93c5fd;
-            text-decoration: none;
-            margin: 0 10px;
-        }
+        footer a { color: var(--teal-md); text-decoration: none; margin: 0 8px; }
+        footer a:hover { text-decoration: underline; }
 
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Print Styles */
+        /* ── PRINT ───────────────────────────────────────────────────────── */
         @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-            
-            .resume-container {
-                box-shadow: none;
-            }
-            
-            .header {
-                background: #1e293b !important;
-                -webkit-print-color-adjust: exact;
-            }
-            
-            .skill-tag:hover, .project-item:hover {
-                transform: none;
-            }
+            body { background: white; padding: 0; }
+            .resume { box-shadow: none; }
+            .project-item:hover { transform: none; }
+            .stats-bar { background: var(--navy) !important; -webkit-print-color-adjust: exact; }
         }
     </style>
 </head>
 <body>
-    <div class="resume-container">
-        <!-- Header Section -->
-        <header class="header">
-            <div class="header-content">
-                <h1 class="name">Emmanuel Simunomba</h1>
-                <h2 class="title">BSc Bioinformatics (Year 3) · Copperbelt University</h2>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>emmanuelsimunomba0@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+260 979 144 995 | +260 767 479 885</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <span><a href="https://www.linkedin.com/in/emmanuel-simunomba0">www.linkedin.com/in/emmanuel-simunomba0</a></span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <span><a href="https://github.com/EmmanuelSimunomba/">github.com/EmmanuelSimunomba</a></span>
-                    </div>
-                </div>
-            </div>
-            
-            <img src="./assets/images/Emmanuel.jpg" alt="Emmanuel Simunomba" class="profile-img">
-        </header>
+<div class="resume">
 
-        <!-- Main Content -->
-        <div class="main-content">
-            <!-- Left Column -->
-            <div class="left-column">
-                <!-- Professional Summary -->
-                <section class="section">
-                    <h2 class="section-title"><i class="fas fa-user"></i> Professional Summary</h2>
-                    <p class="summary-text">
-                        Third-year BSc Bioinformatics student at Copperbelt University with demonstrated experience in genomic surveillance, bioinformatics workflow development, and AI-assisted biological data analysis. Developed reproducible malaria variant-calling pipelines and currently leading the development of Z-Prime AI, a primer design and pathogen surveillance platform optimised for resource-constrained laboratory environments. Seeking an attachment at CIDRZ to contribute computational biology, genomics, and software engineering skills to world-class infectious disease research.
-                    </p>
-                </section>
-
-                <!-- Education -->
-                <section class="section">
-                    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
-                    <div class="education-item">
-                        <div class="education-title">Bachelor of Science in Biology (Bioinformatics)</div>
-                        <div class="education-subtitle">Copperbelt University, School of Mathematics and Natural Sciences — Kitwe, Zambia</div>
-                        <div class="education-duration">2022 – Present · Expected Graduation: 2027</div>
-                        <p><em>Third-year student on track for final-year project completion and graduation in 2027.</em></p>
-                        <p style="margin-top: 10px;"><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Molecular Biology, Statistics, Genomics, Database Management, Programming</p>
-                    </div>
-                    <div class="education-item">
-                        <div class="education-title">Zambia School Certificate (Grade 10–12)</div>
-                        <div class="education-subtitle">St. Columba's Secondary School — Lukulu, Western Province</div>
-                        <div class="education-duration">2019 – 2021</div>
-                        <p>Graduated with complete School Certificate; served as elected School Prefect (2020–2021).</p>
-                    </div>
-                </section>
-
-                <!-- Projects (New Section) -->
-                <section class="section">
-                    <h2 class="section-title"><i class="fas fa-code"></i> Projects</h2>
-                    
-                    <div class="project-item">
-                        <div class="project-title">
-                            Z-Prime AI — Primer Design & Genomic Surveillance Platform
-                            <span class="project-status">In Development</span>
-                        </div>
-                        <p class="project-description">
-                            Leading development of a Python-based AI-assisted primer design platform optimised for resource-constrained laboratory environments. Implements nearest-neighbour Tm calculations, hairpin ΔG, and self-dimer evaluation. Features a dual-path AI layer combining the Claude API (online) and locally hosted Ollama instances (offline) for field use in power- or internet-disrupted settings. Includes diagnostic validation modules for Vibrio cholerae and Mycobacterium tuberculosis. CLI engine complete; Streamlit web interface in progress.
-                        </p>
-                        <div style="font-size:0.85rem; color: var(--gray-color); margin-bottom:8px;">Undergraduate Research Project, Copperbelt University · 2026 – Present</div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Claude API</span>
-                            <span class="tech-tag">Ollama</span>
-                            <span class="tech-tag">Streamlit</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Bioinformatics</span>
-                        </div>
-                    </div>
-
-                    <div class="project-item">
-                        <div class="project-title">
-                            Malaria Genomic Surveillance Pipeline
-                            <span class="project-status" style="background:#bfdbfe; color:#1e40af;">Completed</span>
-                        </div>
-                        <p class="project-description">
-                            Built an end-to-end variant-calling pipeline to track K13 artemisinin resistance mutations in Plasmodium falciparum isolates. Includes rigorous QC, deep sequence alignment, depth-aware variant filtering (QUAL ≥ 30, DP ≥ 10), and automated clinical annotation. Packaged with Docker for cross-platform reproducibility and validated using public datasets from the European Nucleotide Archive (ENA).
-                        </p>
-                        <div style="font-size:0.85rem; color: var(--gray-color); margin-bottom:8px;">Bioinformatics Development Project, Copperbelt University · 2025 – 2026</div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">BWA-MEM</span>
-                            <span class="tech-tag">SAMtools</span>
-                            <span class="tech-tag">BCFtools</span>
-                            <span class="tech-tag">FastQC</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">VCF Analysis</span>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Right Column -->
-            <div class="right-column">
-                <!-- Technical Skills -->
-                <section class="section">
-                    <h2 class="section-title"><i class="fas fa-cogs"></i> Technical Skills</h2>
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h4>Programming</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">Bash</span>
-                                <span class="skill-tag">R (learning)</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h4>Bioinformatics Tools</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">BWA-MEM</span>
-                                <span class="skill-tag">SAMtools</span>
-                                <span class="skill-tag">BCFtools</span>
-                                <span class="skill-tag">FastQC</span>
-                                <span class="skill-tag">fastp</span>
-                                <span class="skill-tag">seqtk</span>
-                                <span class="skill-tag">VCF Analysis</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h4>AI & LLMs</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Claude API</span>
-                                <span class="skill-tag">Ollama</span>
-                                <span class="skill-tag">Prompt Engineering</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h4>DevOps & Tools</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Git</span>
-                                <span class="skill-tag">GitHub</span>
-                                <span class="skill-tag">Docker</span>
-                                <span class="skill-tag">Conda/Miniconda</span>
-                                <span class="skill-tag">Streamlit</span>
-                                <span class="skill-tag">Linux/Ubuntu</span>
-                                <span class="skill-tag">Snakemake (learning)</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Work Experience -->
-                <section class="section">
-                    <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
-                    <div class="certification-item">
-                        <div class="cert-title">Census Enumerator</div>
-                        <div class="cert-subtitle">Zambia Statistics Agency (ZamStats) · 2022</div>
-                        <ul class="cert-details">
-                            <li>Door-to-door digital household data collection under national data integrity protocols</li>
-                            <li>Maintained data compliance and engaged communities for high survey response quality</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <!-- Core Competencies (New Section) -->
-                <section class="section">
-                    <h2 class="section-title"><i class="fas fa-star"></i> Core Competencies</h2>
-                    <div class="skill-tags" style="margin-top: 10px;">
-                        <span class="skill-tag">Genomic Surveillance</span>
-                        <span class="skill-tag">Pipeline Development</span>
-                        <span class="skill-tag">NGS Analysis</span>
-                        <span class="skill-tag">AI Integration</span>
-                        <span class="skill-tag">Problem Solving</span>
-                        <span class="skill-tag">Reproducible Research</span>
-                        <span class="skill-tag">Technical Documentation</span>
-                        <span class="skill-tag">Leadership</span>
-                    </div>
-                </section>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="name">Emmanuel Simunomba</h1>
+            <p class="title">BSc Bioinformatics (Year 3) &nbsp;·&nbsp; Copperbelt University, Zambia</p>
+            <div class="contact-grid">
+                <div class="contact-item"><i class="fas fa-envelope"></i><span>emmanuelsimunomba0@gmail.com</span></div>
+                <div class="contact-item"><i class="fas fa-phone"></i><span>+260 979 144 995 / +260 767 479 885</span></div>
+                <div class="contact-item"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/emmanuel-simunomba0" target="_blank">linkedin.com/in/emmanuel-simunomba0</a></div>
+                <div class="contact-item"><i class="fab fa-github"></i><a href="https://github.com/EmmanuelSimunomba" target="_blank">github.com/EmmanuelSimunomba</a></div>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Lukulu, Western Province, Zambia</span></div>
+                <div class="contact-item"><i class="fas fa-id-card"></i><span>Student No. 22110731</span></div>
             </div>
         </div>
+        <div class="profile-wrap">
+            <img src="./assets/images/Emmanuel.jpg" alt="Emmanuel Simunomba" class="profile-img">
+            <span class="status-badge">Seeking Attachment · Sep 2026</span>
+        </div>
+    </header>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>© 2024 Emmanuel Simunomba. All Rights Reserved</p>
-            <p style="margin-top: 10px;">
-                <a href="mailto:emmanuelsimunomba0@gmail.com">Email</a> |
-                <a href="https://linkedin.com/in/emmanuel-simunomba">LinkedIn</a> |
-                <a href="https://github.com/emmanuelsimunomba0-droid">GitHub</a> |
-                <a href="#" onclick="window.print()">Print Resume</a>
-            </p>
-        </footer>
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+        <div class="stat"><div class="stat-num">2</div><div class="stat-label">Active Projects</div></div>
+        <div class="stat"><div class="stat-num">100<span style="font-size:1rem">/100</span></div><div class="stat-label">Final Project Score</div></div>
+        <div class="stat"><div class="stat-num">3+</div><div class="stat-label">Years Python</div></div>
+        <div class="stat"><div class="stat-num">1</div><div class="stat-label">Internship Certificate</div></div>
+        <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Bioinformatics Tools</div></div>
     </div>
 
-    <script>
-        // Simple script for printing and interactivity
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add hover effects to project items
-            const projectItems = document.querySelectorAll('.project-item');
-            projectItems.forEach(item => {
-                item.addEventListener('mouseenter', function() {
-                    this.style.cursor = 'pointer';
-                });
-            });
+    <!-- MAIN -->
+    <div class="main">
 
-            // Print functionality
-            const printBtn = document.querySelector('a[onclick*="print"]');
-            printBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.print();
-            });
+        <!-- LEFT COLUMN -->
+        <div>
 
-            // Add current year to footer
-            const currentYear = new Date().getFullYear();
-            const footerText = document.querySelector('.footer p');
-            if (footerText) {
-                footerText.innerHTML = footerText.innerHTML.replace('2024', currentYear);
-            }
+            <!-- SUMMARY -->
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-user-circle"></i> Professional Summary</h2>
+                <p class="summary-text">
+                    Third-year BSc Bioinformatics student at Copperbelt University with demonstrated experience in genomic surveillance pipeline development, AI-assisted biological data analysis, and reproducible computational biology. Currently leading the development of Z-Prime AI - an offline-capable, AI-assisted primer design and pathogen surveillance platform designed for resource-constrained laboratory environments in Zambia. Also developed a production-grade malaria K13 resistance detection pipeline validated on public ENA datasets. Seeking an industrial attachment at CIDRZ (September 2026) to apply computational biology and software engineering skills within a world-class infectious disease research environment.
+                </p>
+            </section>
+
+            <!-- EDUCATION -->
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+
+                <div class="edu-item">
+                    <div class="edu-title">Bachelor of Science in Biology (Bioinformatics)</div>
+                    <div class="edu-sub">Copperbelt University, School of Mathematics & Natural Sciences - Kitwe, Zambia</div>
+                    <div class="edu-date">2022 – Present &nbsp;·&nbsp; Expected Graduation: 2027 &nbsp;·&nbsp; Student No. 22110731</div>
+                    <p style="font-size:0.9rem;">Pursuing a rigorous curriculum in computational biology, genomics, molecular biology, statistics, and database management. Third-year student on track for final-year project submission in 2027.</p>
+                    <p style="font-size:0.88rem; margin-top:8px; color:var(--grey);"><strong>Relevant modules:</strong> Data Structures & Algorithms · Molecular Biology · Genomics · Statistics · Database Management · Programming</p>
+                </div>
+
+                <div class="edu-item">
+                    <div class="edu-title">Zambia School Certificate (Grade 10–12)</div>
+                    <div class="edu-sub">St. Columba's Secondary School - Lukulu, Western Province</div>
+                    <div class="edu-date">2019 – 2021</div>
+                    <p style="font-size:0.9rem;">Completed Grade 12 School Certificate. Elected School Prefect (2020–2021), demonstrating leadership and institutional responsibility.</p>
+                </div>
+            </section>
+
+            <!-- PROJECTS -->
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-code-branch"></i> Key Projects</h2>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-title">Z-Prime AI - AI-Assisted Primer Design & Genomic Surveillance Platform</div>
+                        <span class="badge badge-active">In Development</span>
+                    </div>
+                    <div class="project-sub">Final-Year Research Project · Copperbelt University · 2026 – Present</div>
+                    <p class="project-desc">
+                        Leading the development of a Python-based primer design platform optimised for resource-constrained laboratory environments across Zambia and sub-Saharan Africa. The engine implements nearest-neighbour thermodynamics (SantaLucia 1998 parameters), automated hairpin ΔG and self-dimer detection, GC clamp evaluation, and homopolymer run checking. Features a dual-path AI interpretation layer - Claude API for online journal-standard analysis, locally hosted Ollama LLM for offline field use - ensuring the platform functions even in settings with intermittent internet connectivity. Surveillance modules target <em>Vibrio cholerae</em>, <em>Mycobacterium tuberculosis</em>, and Copperbelt environmental pathogens under a One Health framework. CLI engine complete and validated; Streamlit web dashboard in development.
+                    </p>
+                    <div class="tags">
+                        <span class="tech-tag">Python</span><span class="tech-tag">Claude API</span><span class="tech-tag">Ollama LLM</span>
+                        <span class="tech-tag">Streamlit</span><span class="tech-tag">Docker</span><span class="tech-tag">Thermodynamics</span>
+                        <span class="tech-tag">One Health</span><span class="tech-tag">Zambian Pathogens</span>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-title">Malaria Genomic Surveillance Pipeline (v2.1)</div>
+                        <span class="badge badge-complete">Completed</span>
+                    </div>
+                    <div class="project-sub">Bioinformatics Development Project · Copperbelt University · 2025 – 2026</div>
+                    <p class="project-desc">
+                        Built and validated an end-to-end variant-calling pipeline for detecting K13 artemisinin resistance mutations in <em>Plasmodium falciparum</em> isolates from public ENA datasets. Implements allele-verified clinical annotation (position + ALT nucleotide verification), depth-aware quality filtering (QUAL ≥ 30, DP ≥ 10), and automated resistance reporting against WHO-validated K13 mutation catalogs. Fully Dockerised for cross-platform reproducibility and parameterised via a configurable CLI. Pipeline validated using paired-end Illumina data from the MalariaGEN Pf7 project.
+                    </p>
+                    <div class="tags">
+                        <span class="tech-tag">Python</span><span class="tech-tag">BWA-MEM</span><span class="tech-tag">SAMtools</span>
+                        <span class="tech-tag">BCFtools</span><span class="tech-tag">FastQC</span><span class="tech-tag">fastp</span>
+                        <span class="tech-tag">Docker</span><span class="tech-tag">VCF Analysis</span><span class="tech-tag">MalariaGEN Pf7</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div>
+
+            <!-- SKILLS -->
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-cogs"></i> Technical Skills</h2>
+
+                <div class="skill-group">
+                    <h4>Programming & Scripting</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">R (learning)</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>NGS & Bioinformatics Tools</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">BWA-MEM</span>
+                        <span class="skill-tag">SAMtools</span>
+                        <span class="skill-tag">BCFtools</span>
+                        <span class="skill-tag">FastQC</span>
+                        <span class="skill-tag">fastp</span>
+                        <span class="skill-tag">seqtk</span>
+                        <span class="skill-tag">BLAST</span>
+                        <span class="skill-tag">Clustal Omega</span>
+                        <span class="skill-tag">EMBOSS Needle</span>
+                        <span class="skill-tag">VCF Analysis</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>Databases</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">NCBI</span>
+                        <span class="skill-tag">UniProt</span>
+                        <span class="skill-tag">ENA</span>
+                        <span class="skill-tag">DDBJ</span>
+                        <span class="skill-tag">MalariaGEN</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>AI & LLMs</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Claude API</span>
+                        <span class="skill-tag">Ollama</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>DevOps & Reproducibility</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Conda</span>
+                        <span class="skill-tag">Linux/Ubuntu</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">Snakemake (learning)</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CERTIFICATIONS -->
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications</h2>
+
+                <div class="cert-item">
+                    <div class="cert-title">Bioinformatics Summer Internship</div>
+                    <div class="cert-sub">Biotechshalaa · June 2026 · 4 Weeks · Online</div>
+                    <div class="cert-no">Certificate No: BTS/BSI/2606/031</div>
+                    <p style="font-size:0.84rem; margin-top:6px;">Completed structured training in biological databases, sequence alignment, BLAST analysis, multiple sequence alignment, phylogenetic tree construction, and protein characterisation. Achieved 100/100 on the final capstone project (Human Gene Analysis - HBB).</p>
+                </div>
+            </section>
+
+            <!-- WORK EXPERIENCE -->
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
+                <div class="work-item">
+                    <div class="work-title">Census Enumerator</div>
+                    <div class="work-sub">Zambia Statistics Agency (ZamStats) · 2022 Population & Housing Census</div>
+                    <ul class="work-list">
+                        <li>Digital household data collection under national data integrity protocols</li>
+                        <li>Community engagement and high-quality survey response maintenance</li>
+                        <li>Experience working independently under structured national field protocols</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- CORE COMPETENCIES -->
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-star"></i> Core Competencies</h2>
+                <div class="skill-tags">
+                    <span class="skill-tag">Genomic Surveillance</span>
+                    <span class="skill-tag">Pipeline Development</span>
+                    <span class="skill-tag">NGS Analysis</span>
+                    <span class="skill-tag">AI Integration</span>
+                    <span class="skill-tag">One Health</span>
+                    <span class="skill-tag">Reproducible Research</span>
+                    <span class="skill-tag">Technical Writing</span>
+                    <span class="skill-tag">Problem Solving</span>
+                    <span class="skill-tag">Leadership</span>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p style="margin-bottom:8px;">© 2026 Emmanuel Simunomba · BSc Bioinformatics · Copperbelt University · Zambia</p>
+        <p>
+            <a href="mailto:emmanuelsimunomba0@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://www.linkedin.com/in/emmanuel-simunomba0" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/EmmanuelSimunomba" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" onclick="window.print(); return false;"><i class="fas fa-print"></i> Print</a>
+        </p>
+    </footer>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.project-item').forEach(el => {
+            el.style.cursor = 'pointer';
         });
-    </script>
+    });
+</script>
 </body>
 </html>
