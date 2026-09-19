@@ -3,34 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emmanuel Simunomba - Bioinformatics Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Emmanuel Simunomba - Bioinformatics CV</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         :root {
-            --navy:     #1B2A4A;
-            --navy-mid: #243660;
-            --navy-lt:  #E8EDF5;
-            --teal:     #1A7A6E;
-            --teal-lt:  #E6F4F2;
-            --teal-bd:  #A8D5CF;
-            --gold:     #B8860B;
-            --gold-lt:  #FDF5E0;
-            --gold-bd:  #D4A843;
-            --purple:   #5B3FA0;
-            --purple-lt:#F0ECFA;
-            --purple-bd:#B8A6E0;
-            --crimson:  #9B2335;
-            --crim-lt:  #FAEAEC;
-            --crim-bd:  #D9899A;
-            --slate:    #2C3E50;
-            --grey:     #6B7A8D;
-            --border:   #E2E8F0;
-            --white:    #FFFFFF;
-            --radius:   8px;
-            --shadow:   0 2px 14px rgba(27,42,74,0.10);
-            --trans:    all 0.22s ease;
+            --navy:      #1B2A4A;
+            --navy-mid:  #243660;
+            --navy-lt:   #E8EDF5;
+            --teal:      #1A7A6E;
+            --teal-lt:   #E6F4F2;
+            --teal-bd:   #A8D5CF;
+            --gold:      #B8860B;
+            --gold-lt:   #FDF5E0;
+            --gold-bd:   #D4A843;
+            --purple:    #5B3FA0;
+            --purple-lt: #F0ECFA;
+            --purple-bd: #B8A6E0;
+            --crimson:   #9B2335;
+            --crim-lt:   #FAEAEC;
+            --crim-bd:   #D9899A;
+            --slate:     #2C3E50;
+            --grey:      #6B7A8D;
+            --border:    #E2E8F0;
+            --white:     #FFFFFF;
+            --radius:    8px;
+            --shadow:    0 2px 14px rgba(27,42,74,0.10);
+            --trans:     all 0.22s ease;
         }
 
         body {
@@ -50,9 +58,14 @@
             overflow: hidden;
         }
 
-        /* ── HEADER ─────────────────────────────────────────────────────── */
+        /* HEADER */
         .header {
-            background: linear-gradient(135deg, #0F1E36 0%, #1B2A4A 55%, #243660 100%);
+            background: linear-gradient(
+                135deg,
+                #0F1E36 0%,
+                #1B2A4A 55%,
+                #243660 100%
+            );
             color: var(--white);
             padding: 38px 46px;
             display: flex;
@@ -62,7 +75,10 @@
             flex-wrap: wrap;
         }
 
-        .header-content { flex: 1; min-width: 280px; }
+        .header-content {
+            flex: 1;
+            min-width: 280px;
+        }
 
         .name {
             font-size: 2.5rem;
@@ -87,21 +103,37 @@
         }
 
         .contact-item {
-            display: flex; align-items: center;
-            gap: 8px; font-size: 0.86rem; opacity: 0.90;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.86rem;
+            opacity: 0.90;
         }
 
-        .contact-item i { color: #93b4d8; width: 15px; }
-        .contact-item a { color: var(--white); text-decoration: none; }
-        .contact-item a:hover { text-decoration: underline; }
+        .contact-item i {
+            color: #93b4d8;
+            width: 15px;
+        }
+
+        .contact-item a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
 
         .profile-wrap {
-            display: flex; flex-direction: column;
-            align-items: center; gap: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
         }
 
         .profile-img {
-            width: 130px; height: 130px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
             border: 3px solid rgba(255,255,255,0.35);
             object-fit: cover;
@@ -120,9 +152,13 @@
             white-space: nowrap;
         }
 
-        /* ── STATS BAR ───────────────────────────────────────────────────── */
+        /* STATS BAR */
         .stats-bar {
-            background: linear-gradient(90deg, var(--navy) 0%, var(--navy-mid) 100%);
+            background: linear-gradient(
+                90deg,
+                var(--navy) 0%,
+                var(--navy-mid) 100%
+            );
             padding: 18px 44px;
             display: flex;
             justify-content: space-around;
@@ -130,12 +166,30 @@
             gap: 12px;
         }
 
-        .stat { text-align: center; }
-        .stat-num { font-size: 1.6rem; font-weight: 800; color: var(--gold); }
-        .stat-num sub { font-size: 0.9rem; font-weight: 400; color: rgba(255,255,255,0.6); }
-        .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.70); text-transform: uppercase; letter-spacing: 0.5px; }
+        .stat {
+            text-align: center;
+        }
 
-        /* ── LAYOUT ──────────────────────────────────────────────────────── */
+        .stat-num {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--gold);
+        }
+
+        .stat-num sub {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .stat-label {
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.70);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* LAYOUT */
         .main {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -143,9 +197,13 @@
             padding: 24px;
         }
 
-        @media (max-width: 760px) { .main { grid-template-columns: 1fr; } }
+        @media (max-width: 760px) {
+            .main {
+                grid-template-columns: 1fr;
+            }
+        }
 
-        /* ── SECTION WRAPPER ─────────────────────────────────────────────── */
+        /* SECTION */
         .section {
             border-radius: var(--radius);
             overflow: hidden;
@@ -164,27 +222,61 @@
             letter-spacing: 1px;
         }
 
-        .section-header i { font-size: 0.88rem; }
+        .section-header i {
+            font-size: 0.88rem;
+        }
 
-        .section-body { padding: 16px 18px; }
+        .section-body {
+            padding: 16px 18px;
+        }
 
-        /* Section colour themes */
-        .sec-navy   .section-header { background: var(--navy);    color: var(--white); }
-        .sec-navy   .section-body   { background: var(--navy-lt); }
+        /* SECTION THEMES */
+        .sec-navy .section-header {
+            background: var(--navy);
+            color: var(--white);
+        }
 
-        .sec-teal   .section-header { background: var(--teal);    color: var(--white); }
-        .sec-teal   .section-body   { background: var(--teal-lt); }
+        .sec-navy .section-body {
+            background: var(--navy-lt);
+        }
 
-        .sec-gold   .section-header { background: var(--gold);    color: var(--white); }
-        .sec-gold   .section-body   { background: var(--gold-lt); }
+        .sec-teal .section-header {
+            background: var(--teal);
+            color: var(--white);
+        }
 
-        .sec-purple .section-header { background: var(--purple);  color: var(--white); }
-        .sec-purple .section-body   { background: var(--purple-lt); }
+        .sec-teal .section-body {
+            background: var(--teal-lt);
+        }
 
-        .sec-crimson .section-header { background: var(--crimson); color: var(--white); }
-        .sec-crimson .section-body   { background: var(--crim-lt); }
+        .sec-gold .section-header {
+            background: var(--gold);
+            color: var(--white);
+        }
 
-        /* ── SUMMARY ─────────────────────────────────────────────────────── */
+        .sec-gold .section-body {
+            background: var(--gold-lt);
+        }
+
+        .sec-purple .section-header {
+            background: var(--purple);
+            color: var(--white);
+        }
+
+        .sec-purple .section-body {
+            background: var(--purple-lt);
+        }
+
+        .sec-crimson .section-header {
+            background: var(--crimson);
+            color: var(--white);
+        }
+
+        .sec-crimson .section-body {
+            background: var(--crim-lt);
+        }
+
+        /* SUMMARY */
         .summary-text {
             font-size: 0.94rem;
             line-height: 1.78;
@@ -192,7 +284,7 @@
             text-align: left;
         }
 
-        /* ── EDUCATION ───────────────────────────────────────────────────── */
+        /* EDUCATION */
         .edu-item {
             background: var(--white);
             border-radius: var(--radius);
@@ -201,14 +293,36 @@
             margin-bottom: 12px;
         }
 
-        .edu-item:last-child { margin-bottom: 0; }
+        .edu-item:last-child {
+            margin-bottom: 0;
+        }
 
-        .edu-title { font-weight: 700; font-size: 0.95rem; color: var(--navy); margin-bottom: 3px; }
-        .edu-sub   { color: var(--teal); font-weight: 600; font-size: 0.84rem; margin-bottom: 3px; }
-        .edu-date  { color: var(--grey); font-size: 0.80rem; margin-bottom: 7px; }
-        .edu-note  { font-size: 0.85rem; color: var(--slate); }
+        .edu-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--navy);
+            margin-bottom: 3px;
+        }
 
-        /* ── PROJECTS ────────────────────────────────────────────────────── */
+        .edu-sub {
+            color: var(--teal);
+            font-weight: 600;
+            font-size: 0.84rem;
+            margin-bottom: 3px;
+        }
+
+        .edu-date {
+            color: var(--grey);
+            font-size: 0.80rem;
+            margin-bottom: 7px;
+        }
+
+        .edu-note {
+            font-size: 0.85rem;
+            color: var(--slate);
+        }
+
+        /* PROJECTS */
         .project-item {
             background: var(--white);
             border-radius: var(--radius);
@@ -218,7 +332,9 @@
             transition: var(--trans);
         }
 
-        .project-item:last-child { margin-bottom: 0; }
+        .project-item:last-child {
+            margin-bottom: 0;
+        }
 
         .project-item:hover {
             transform: translateY(-3px);
@@ -233,20 +349,48 @@
             margin-bottom: 5px;
         }
 
-        .project-title { font-size: 0.97rem; font-weight: 700; color: var(--navy); }
-        .project-sub   { font-size: 0.79rem; color: var(--grey); margin-bottom: 9px; }
-        .project-desc  { font-size: 0.89rem; line-height: 1.70; margin-bottom: 11px; }
-
-        .badge {
-            padding: 3px 10px; border-radius: 20px;
-            font-size: 0.72rem; font-weight: 700;
-            white-space: nowrap; flex-shrink: 0;
+        .project-title {
+            font-size: 0.97rem;
+            font-weight: 700;
+            color: var(--navy);
         }
 
-        .badge-active   { background: #FEF3C7; color: #92400E; }
-        .badge-complete { background: var(--navy-lt); color: var(--navy); }
+        .project-sub {
+            font-size: 0.79rem;
+            color: var(--grey);
+            margin-bottom: 9px;
+        }
 
-        .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .project-desc {
+            font-size: 0.89rem;
+            line-height: 1.70;
+            margin-bottom: 11px;
+        }
+
+        .badge {
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .badge-active {
+            background: #FEF3C7;
+            color: #92400E;
+        }
+
+        .badge-planned {
+            background: var(--navy-lt);
+            color: var(--navy);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
 
         .tech-tag {
             background: var(--navy-lt);
@@ -258,9 +402,14 @@
             border: 1px solid #C8D2E6;
         }
 
-        /* ── SKILL GROUPS ────────────────────────────────────────────────── */
-        .skill-group { margin-bottom: 13px; }
-        .skill-group:last-child { margin-bottom: 0; }
+        /* SKILLS */
+        .skill-group {
+            margin-bottom: 13px;
+        }
+
+        .skill-group:last-child {
+            margin-bottom: 0;
+        }
 
         .skill-group h4 {
             font-size: 0.75rem;
@@ -271,7 +420,11 @@
             margin-bottom: 6px;
         }
 
-        .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
 
         .skill-tag {
             background: var(--white);
@@ -290,7 +443,7 @@
             transform: translateY(-1px);
         }
 
-        /* ── CERT CARD ───────────────────────────────────────────────────── */
+        /* CERTIFICATIONS */
         .cert-card {
             background: var(--white);
             border-radius: var(--radius);
@@ -299,13 +452,36 @@
             margin-bottom: 10px;
         }
 
-        .cert-card:last-child { margin-bottom: 0; }
-        .cert-title { font-weight: 700; font-size: 0.92rem; color: var(--navy); margin-bottom: 3px; }
-        .cert-sub   { color: var(--grey); font-size: 0.80rem; margin-bottom: 4px; }
-        .cert-no    { font-size: 0.78rem; color: var(--gold); font-weight: 700; margin-bottom: 6px; }
-        .cert-note  { font-size: 0.82rem; color: var(--slate); }
+        .cert-card:last-child {
+            margin-bottom: 0;
+        }
 
-        /* ── WORK ────────────────────────────────────────────────────────── */
+        .cert-title {
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: var(--navy);
+            margin-bottom: 3px;
+        }
+
+        .cert-sub {
+            color: var(--grey);
+            font-size: 0.80rem;
+            margin-bottom: 4px;
+        }
+
+        .cert-no {
+            font-size: 0.78rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .cert-note {
+            font-size: 0.82rem;
+            color: var(--slate);
+        }
+
+        /* WORK */
         .work-card {
             background: var(--white);
             border-radius: var(--radius);
@@ -313,13 +489,33 @@
             padding: 13px 15px;
         }
 
-        .work-title { font-weight: 700; font-size: 0.92rem; color: var(--navy); }
-        .work-sub   { color: var(--grey); font-size: 0.80rem; margin-bottom: 7px; }
-        .work-list  { padding-left: 14px; font-size: 0.84rem; }
-        .work-list li { margin-bottom: 3px; }
+        .work-title {
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: var(--navy);
+        }
 
-        /* ── COMPETENCIES ────────────────────────────────────────────────── */
-        .comp-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .work-sub {
+            color: var(--grey);
+            font-size: 0.80rem;
+            margin-bottom: 7px;
+        }
+
+        .work-list {
+            padding-left: 14px;
+            font-size: 0.84rem;
+        }
+
+        .work-list li {
+            margin-bottom: 3px;
+        }
+
+        /* COMPETENCIES */
+        .comp-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
 
         .comp-tag {
             background: var(--white);
@@ -331,7 +527,7 @@
             border: 1px solid var(--crim-bd);
         }
 
-        /* ── REFERENCES ──────────────────────────────────────────────────── */
+        /* REFERENCES */
         .ref-card {
             background: var(--white);
             border-radius: var(--radius);
@@ -340,12 +536,29 @@
             margin-bottom: 9px;
         }
 
-        .ref-card:last-child { margin-bottom: 0; }
-        .ref-name  { font-weight: 700; font-size: 0.90rem; color: var(--navy); }
-        .ref-role  { color: var(--grey); font-size: 0.80rem; margin-bottom: 2px; }
-        .ref-contact { font-size: 0.80rem; color: var(--teal); font-weight: 600; }
+        .ref-card:last-child {
+            margin-bottom: 0;
+        }
 
-        /* ── FOOTER ──────────────────────────────────────────────────────── */
+        .ref-name {
+            font-weight: 700;
+            font-size: 0.90rem;
+            color: var(--navy);
+        }
+
+        .ref-role {
+            color: var(--grey);
+            font-size: 0.80rem;
+            margin-bottom: 2px;
+        }
+
+        .ref-contact {
+            font-size: 0.80rem;
+            color: var(--teal);
+            font-weight: 600;
+        }
+
+        /* FOOTER */
         footer {
             background: var(--navy);
             color: rgba(255,255,255,0.75);
@@ -354,133 +567,569 @@
             font-size: 0.82rem;
         }
 
-        footer a { color: #93b4d8; text-decoration: none; margin: 0 8px; }
-        footer a:hover { color: var(--white); }
+        footer a {
+            color: #93b4d8;
+            text-decoration: none;
+            margin: 0 8px;
+        }
 
+        footer a:hover {
+            color: var(--white);
+        }
+
+        /* PRINT BUTTON */
+        .print-btn {
+            cursor: pointer;
+        }
+
+        /* =========================================
+           PRINT / A4 CV
+        ========================================= */
         @media print {
-            body { background: white; padding: 0; }
-            .resume { box-shadow: none; }
-            .project-item:hover { transform: none; }
+
+            @page {
+                size: A4;
+                margin: 10mm;
+            }
+
+            html,
+            body {
+                width: 210mm;
+                min-height: 297mm;
+            }
+
+            body {
+                background: white !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                color: #000;
+                font-size: 9.5pt;
+            }
+
+            .resume {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+                background: white;
+                box-shadow: none;
+                border-radius: 0;
+                overflow: visible;
+            }
+
+            .header {
+                padding: 20px 25px;
+                border-radius: 0;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .name {
+                font-size: 26px;
+            }
+
+            .title {
+                font-size: 10pt;
+                margin-bottom: 12px;
+            }
+
+            .contact-grid {
+                gap: 5px 14px;
+            }
+
+            .contact-item {
+                font-size: 8.2pt;
+            }
+
+            .profile-img {
+                width: 95px;
+                height: 95px;
+            }
+
+            .status-badge {
+                font-size: 7pt;
+                padding: 4px 9px;
+            }
+
+            .stats-bar {
+                padding: 10px 20px;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .stat-num {
+                font-size: 13pt;
+            }
+
+            .stat-label {
+                font-size: 6.5pt;
+            }
+
+            .main {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 12px;
+                padding: 12px;
+            }
+
+            .section {
+                margin-bottom: 10px;
+                box-shadow: none;
+                break-inside: auto;
+                page-break-inside: auto;
+            }
+
+            .section-header {
+                padding: 6px 10px;
+                font-size: 7.2pt;
+            }
+
+            .section-body {
+                padding: 9px 10px;
+            }
+
+            .summary-text {
+                font-size: 8.4pt;
+                line-height: 1.5;
+            }
+
+            .edu-item,
+            .project-item,
+            .cert-card,
+            .work-card,
+            .ref-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .edu-item {
+                padding: 8px 10px;
+                margin-bottom: 7px;
+            }
+
+            .edu-title {
+                font-size: 8.7pt;
+            }
+
+            .edu-sub,
+            .edu-date,
+            .edu-note {
+                font-size: 7.6pt;
+            }
+
+            .project-item {
+                padding: 9px 11px;
+                margin-bottom: 8px;
+            }
+
+            .project-title {
+                font-size: 8.8pt;
+            }
+
+            .project-sub {
+                font-size: 7.3pt;
+                margin-bottom: 5px;
+            }
+
+            .project-desc {
+                font-size: 7.8pt;
+                line-height: 1.48;
+                margin-bottom: 6px;
+            }
+
+            .badge {
+                font-size: 6.5pt;
+                padding: 2px 7px;
+            }
+
+            .tech-tag,
+            .skill-tag,
+            .comp-tag {
+                font-size: 6.7pt;
+                padding: 2px 6px;
+            }
+
+            .skill-group {
+                margin-bottom: 8px;
+            }
+
+            .skill-group h4 {
+                font-size: 6.8pt;
+                margin-bottom: 4px;
+            }
+
+            .cert-card {
+                padding: 8px 10px;
+                margin-bottom: 7px;
+            }
+
+            .cert-title {
+                font-size: 8.5pt;
+            }
+
+            .cert-sub,
+            .cert-no,
+            .cert-note {
+                font-size: 7.3pt;
+            }
+
+            .work-card {
+                padding: 8px 10px;
+            }
+
+            .work-title {
+                font-size: 8.5pt;
+            }
+
+            .work-sub,
+            .work-list {
+                font-size: 7.3pt;
+            }
+
+            .ref-card {
+                padding: 7px 9px;
+                margin-bottom: 6px;
+            }
+
+            .ref-name {
+                font-size: 8pt;
+            }
+
+            .ref-role,
+            .ref-contact {
+                font-size: 7pt;
+            }
+
+            footer {
+                padding: 10px;
+                font-size: 7pt;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            footer a {
+                margin: 0 4px;
+            }
+
+            .project-item:hover,
+            .skill-tag:hover {
+                transform: none;
+                box-shadow: none;
+            }
+
+            a {
+                color: inherit !important;
+                text-decoration: none !important;
+            }
         }
     </style>
 </head>
+
 <body>
+
 <div class="resume">
 
     <!-- HEADER -->
     <header class="header">
+
         <div class="header-content">
+
             <h1 class="name">Emmanuel Simunomba</h1>
-            <p class="title">BSc Bioinformatics (Year 3) &nbsp;·&nbsp; The Copperbelt University, Zambia</p>
+
+            <p class="title">
+                BSc Bioinformatics (Year 3)
+                &nbsp;·&nbsp;
+                The Copperbelt University, Zambia
+            </p>
+
             <div class="contact-grid">
-                <div class="contact-item"><i class="fas fa-envelope"></i><span>emmanuelsimunomba0@gmail.com</span></div>
-                <div class="contact-item"><i class="fas fa-phone"></i><span>+260 979 144 995 / +260 767 479 885</span></div>
-                <div class="contact-item"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/emmanuel-simunomba0" target="_blank">linkedin.com/in/emmanuel-simunomba0</a></div>
-                <div class="contact-item"><i class="fab fa-github"></i><a href="https://github.com/EmmanuelSimunomba" target="_blank">github.com/EmmanuelSimunomba</a></div>
-                <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Lukulu, Western Province, Zambia</span></div>
-                <div class="contact-item"><i class="fas fa-id-card"></i><span>Student No. 22110731</span></div>
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>emmanuelsimunomba0@gmail.com</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+260 979 144 995 / +260 767 479 885</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/emmanuel-simunomba0"
+                       target="_blank">
+                        linkedin.com/in/emmanuel-simunomba0
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/EmmanuelSimunomba"
+                       target="_blank">
+                        github.com/EmmanuelSimunomba
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Lukulu, Western Province, Zambia</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-id-card"></i>
+                    <span>Student No. 22110731</span>
+                </div>
+
             </div>
         </div>
+
         <div class="profile-wrap">
-            <img src="./assets/images/Emmanuel.png" alt="Emmanuel Simunomba" class="profile-img">
-            <span class="status-badge">Seeking Attachment · Sep 2026</span>
+
+            <img src="./assets/images/Emmanuel.png"
+                 alt="Emmanuel Simunomba"
+                 class="profile-img">
+
+            <span class="status-badge">
+                Seeking Attachment · Sep 2026
+            </span>
+
         </div>
+
     </header>
+
 
     <!-- STATS BAR -->
     <div class="stats-bar">
+
         <div class="stat">
             <div class="stat-num">2</div>
-            <div class="stat-label">Active Projects</div>
+            <div class="stat-label">Key Projects</div>
         </div>
+
         <div class="stat">
-            <div class="stat-num">100<sub>/100</sub></div>
-            <div class="stat-label">Final Project Score</div>
+            <div class="stat-num">2</div>
+            <div class="stat-label">Internship Certificates</div>
         </div>
-        <div class="stat">
-            <div class="stat-num">3+</div>
-            <div class="stat-label">Years Python</div>
-        </div>
-        <div class="stat">
-            <div class="stat-num">1</div>
-            <div class="stat-label">Internship Certificate</div>
-        </div>
+
         <div class="stat">
             <div class="stat-num">10+</div>
             <div class="stat-label">Bioinformatics Tools</div>
         </div>
+
+        <div class="stat">
+            <div class="stat-num">3</div>
+            <div class="stat-label">Core Domains</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-num">1</div>
+            <div class="stat-label">National Census Experience</div>
+        </div>
+
     </div>
 
-    <!-- MAIN GRID -->
+
+    <!-- MAIN -->
     <div class="main">
 
         <!-- LEFT COLUMN -->
         <div>
 
-            <!-- SUMMARY - navy -->
+            <!-- PROFESSIONAL SUMMARY -->
             <div class="section sec-navy">
-                <div class="section-header"><i class="fas fa-user-circle"></i> Professional Summary</div>
+
+                <div class="section-header">
+                    <i class="fas fa-user-circle"></i>
+                    Professional Summary
+                </div>
+
                 <div class="section-body">
+
                     <p class="summary-text">
-                        Third-year BSc Bioinformatics student at The Copperbelt University with demonstrated experience in genomic surveillance pipeline development, AI-assisted biological data analysis, and reproducible computational biology. Currently leading the development of Z-Prime AI - an offline-capable, AI-assisted primer design and pathogen surveillance platform designed for resource-constrained laboratory environments in Zambia. Also developed a production-grade malaria K13 resistance detection pipeline validated on public ENA datasets. Seeking an industrial attachment at a leading public health or research institution to apply computational biology and software engineering skills within an infectious disease research environment.
+                        Third-year BSc Bioinformatics student at The Copperbelt
+                        University with practical training in biological sequence
+                        analysis, comparative genomics, phylogenetics, Python
+                        programming, and biological data analysis. Currently
+                        developing projects that explore computational approaches
+                        to primer design, genomic surveillance, and pathogen
+                        research. Recently completed intensive practical internships
+                        in bioinformatics and Python & Data Science. Seeking an
+                        industrial attachment at a public health, research, or
+                        biotechnology institution where I can apply and further
+                        develop my computational biology, programming, and data
+                        analysis skills.
                     </p>
+
                 </div>
             </div>
 
-            <!-- EDUCATION - teal -->
+
+            <!-- EDUCATION -->
             <div class="section sec-teal">
-                <div class="section-header"><i class="fas fa-graduation-cap"></i> Education</div>
+
+                <div class="section-header">
+                    <i class="fas fa-graduation-cap"></i>
+                    Education
+                </div>
+
                 <div class="section-body">
+
                     <div class="edu-item">
-                        <div class="edu-title">Bachelor of Science in Biology (Bioinformatics)</div>
-                        <div class="edu-sub">The Copperbelt University · School of Mathematics & Natural Sciences - Kitwe, Zambia</div>
-                        <div class="edu-date">2022 – Present &nbsp;·&nbsp; Expected Graduation: 2027 &nbsp;·&nbsp; Student No. 22110731</div>
-                        <p class="edu-note">Third-year student pursuing rigorous training in computational biology, genomics, molecular biology, statistics, and database management.</p>
-                        <p style="font-size:0.82rem; margin-top:7px; color:var(--grey);"><strong>Relevant modules:</strong> Data Structures & Algorithms · Molecular Biology · Genomics · Statistics · Database Management · Programming</p>
+
+                        <div class="edu-title">
+                            Bachelor of Science in Biology (Bioinformatics)
+                        </div>
+
+                        <div class="edu-sub">
+                            The Copperbelt University · School of Mathematics
+                            & Natural Sciences · Kitwe, Zambia
+                        </div>
+
+                        <div class="edu-date">
+                            2022 – Present
+                            &nbsp;·&nbsp;
+                            Expected Graduation: 2027
+                            &nbsp;·&nbsp;
+                            Student No. 22110731
+                        </div>
+
+                        <p class="edu-note">
+                            Third-year student receiving training in computational
+                            biology, genomics, molecular biology, statistics,
+                            programming, and database management.
+                        </p>
+
+                        <p style="font-size:0.82rem; margin-top:7px; color:var(--grey);">
+                            <strong>Relevant modules:</strong>
+                            Data Structures & Algorithms ·
+                            Molecular Biology ·
+                            Genomics ·
+                            Statistics ·
+                            Database Management ·
+                            Programming
+                        </p>
+
                     </div>
+
+
                     <div class="edu-item">
-                        <div class="edu-title">Zambia School Certificate (Grade 10–12)</div>
-                        <div class="edu-sub">St. Columba's Secondary School - Lukulu, Western Province</div>
-                        <div class="edu-date">2019 – 2021</div>
-                        <p class="edu-note">Completed Grade 12 School Certificate. Elected School Prefect (2020–2021).</p>
+
+                        <div class="edu-title">
+                            Zambia School Certificate (Grade 10–12)
+                        </div>
+
+                        <div class="edu-sub">
+                            St. Columba's Secondary School · Lukulu,
+                            Western Province
+                        </div>
+
+                        <div class="edu-date">
+                            2019 – 2021
+                        </div>
+
+                        <p class="edu-note">
+                            Completed Grade 12 School Certificate.
+                            Elected School Prefect (2020–2021).
+                        </p>
+
                     </div>
+
                 </div>
             </div>
 
-            <!-- PROJECTS - purple -->
+
+            <!-- PROJECTS -->
             <div class="section sec-purple">
-                <div class="section-header"><i class="fas fa-code-branch"></i> Key Projects</div>
+
+                <div class="section-header">
+                    <i class="fas fa-code-branch"></i>
+                    Key Projects
+                </div>
+
                 <div class="section-body">
 
+
+                    <!-- Z-PRIME -->
                     <div class="project-item">
+
                         <div class="project-header">
-                            <div class="project-title">Z-Prime AI - AI-Assisted Primer Design & Genomic Surveillance Platform</div>
-                            <span class="badge badge-active">In Development</span>
+
+                            <div class="project-title">
+                                Z-Prime AI – AI-Assisted Primer Design &
+                                Genomic Surveillance Platform
+                            </div>
+
+                            <span class="badge badge-active">
+                                In Development
+                            </span>
+
                         </div>
-                        <div class="project-sub">Final-Year Research Project · The Copperbelt University · 2026 – Present</div>
+
+                        <div class="project-sub">
+                            Final-Year Research Project ·
+                            The Copperbelt University · 2026 – Present
+                        </div>
+
                         <p class="project-desc">
-                            Leading development of a Python-based primer design platform optimised for resource-constrained laboratory environments across Zambia and sub-Saharan Africa. Implements nearest-neighbour thermodynamics (SantaLucia 1998), automated hairpin ΔG and self-dimer detection, GC clamp evaluation, and homopolymer run checking. Features a dual-path AI layer - Claude API for online analysis, locally hosted Ollama LLM for offline field use - ensuring full functionality in settings with intermittent connectivity. Surveillance modules target <em>Vibrio cholerae</em>, <em>Mycobacterium tuberculosis</em>, and Copperbelt environmental pathogens under a One Health framework. CLI engine complete and validated; Streamlit dashboard in development.
+                            Developing a Python-based platform exploring
+                            computational approaches to primer design and
+                            genomic surveillance for resource-constrained
+                            laboratory environments. The project focuses on
+                            primer analysis, biological sequence processing,
+                            thermodynamic considerations, and potential
+                            integration of AI-assisted analysis. Planned
+                            surveillance applications include pathogens such
+                            as <em>Vibrio cholerae</em> and
+                            <em>Mycobacterium tuberculosis</em> within a
+                            One Health research context.
                         </p>
+
                         <div class="tags">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Claude API</span>
-                            <span class="tech-tag">Ollama LLM</span>
+                            <span class="tech-tag">Biopython</span>
+                            <span class="tech-tag">AI / LLMs</span>
                             <span class="tech-tag">Streamlit</span>
                             <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Thermodynamics</span>
+                            <span class="tech-tag">Primer Design</span>
+                            <span class="tech-tag">Genomic Surveillance</span>
                             <span class="tech-tag">One Health</span>
                         </div>
+
                     </div>
 
+
+                    <!-- MALARIA -->
                     <div class="project-item">
+
                         <div class="project-header">
-                            <div class="project-title">Malaria Genomic Surveillance Pipeline (v2.1)</div>
-                            <span class="badge badge-complete">Completed</span>
+
+                            <div class="project-title">
+                                Malaria Genomic Surveillance Pipeline
+                            </div>
+
+                            <span class="badge badge-planned">
+                                Development Project
+                            </span>
+
                         </div>
-                        <div class="project-sub">Bioinformatics Development Project · The Copperbelt University · 2025 – 2026</div>
+
+                        <div class="project-sub">
+                            Bioinformatics Development Project ·
+                            The Copperbelt University · 2025 – 2026
+                        </div>
+
                         <p class="project-desc">
-                            Built and validated an end-to-end variant-calling pipeline for detecting K13 artemisinin resistance mutations in <em>Plasmodium falciparum</em> isolates. Implements allele-verified clinical annotation, depth-aware quality filtering (QUAL ≥ 30, DP ≥ 10), and automated resistance reporting against WHO-validated K13 mutation catalogs. Fully Dockerised for cross-platform reproducibility; validated using paired-end Illumina data from the MalariaGEN Pf7 project.
+                            Developed a bioinformatics workflow for exploring
+                            genomic data from <em>Plasmodium falciparum</em>
+                            with a focus on K13 mutations associated with
+                            artemisinin resistance. The project involves
+                            sequence and variant-processing concepts,
+                            quality-control workflows, genomic data
+                            interpretation, and automated analysis using
+                            commonly used bioinformatics command-line tools.
+                            Further development and validation of the workflow
+                            are ongoing.
                         </p>
+
                         <div class="tags">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">BWA-MEM</span>
@@ -489,8 +1138,9 @@
                             <span class="tech-tag">FastQC</span>
                             <span class="tech-tag">fastp</span>
                             <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">MalariaGEN Pf7</span>
+                            <span class="tech-tag">Malaria Genomics</span>
                         </div>
+
                     </div>
 
                 </div>
@@ -498,25 +1148,39 @@
 
         </div>
 
+
         <!-- RIGHT COLUMN -->
         <div>
 
-            <!-- SKILLS - navy -->
+
+            <!-- TECHNICAL SKILLS -->
             <div class="section sec-navy">
-                <div class="section-header"><i class="fas fa-cogs"></i> Technical Skills</div>
+
+                <div class="section-header">
+                    <i class="fas fa-cogs"></i>
+                    Technical Skills
+                </div>
+
                 <div class="section-body">
 
+
                     <div class="skill-group">
+
                         <h4>Programming & Scripting</h4>
+
                         <div class="skill-tags">
                             <span class="skill-tag">Python</span>
                             <span class="skill-tag">Bash</span>
-                            <span class="skill-tag">R (learning)</span>
+                            <span class="skill-tag">R (Learning)</span>
                         </div>
+
                     </div>
 
+
                     <div class="skill-group">
+
                         <h4>NGS & Bioinformatics</h4>
+
                         <div class="skill-tags">
                             <span class="skill-tag">BWA-MEM</span>
                             <span class="skill-tag">SAMtools</span>
@@ -529,10 +1193,14 @@
                             <span class="skill-tag">EMBOSS Needle</span>
                             <span class="skill-tag">VCF Analysis</span>
                         </div>
+
                     </div>
 
+
                     <div class="skill-group">
+
                         <h4>Databases</h4>
+
                         <div class="skill-tags">
                             <span class="skill-tag">NCBI</span>
                             <span class="skill-tag">UniProt</span>
@@ -540,113 +1208,281 @@
                             <span class="skill-tag">DDBJ</span>
                             <span class="skill-tag">MalariaGEN</span>
                         </div>
+
                     </div>
 
+
                     <div class="skill-group">
+
                         <h4>AI & LLMs</h4>
+
                         <div class="skill-tags">
                             <span class="skill-tag">Claude API</span>
                             <span class="skill-tag">Ollama</span>
                             <span class="skill-tag">Prompt Engineering</span>
                         </div>
+
                     </div>
 
+
                     <div class="skill-group">
+
                         <h4>DevOps & Reproducibility</h4>
+
                         <div class="skill-tags">
                             <span class="skill-tag">Git</span>
                             <span class="skill-tag">GitHub</span>
                             <span class="skill-tag">Docker</span>
                             <span class="skill-tag">Conda</span>
-                            <span class="skill-tag">Linux/Ubuntu</span>
+                            <span class="skill-tag">Linux / Ubuntu</span>
                             <span class="skill-tag">Streamlit</span>
-                            <span class="skill-tag">Snakemake (learning)</span>
+                            <span class="skill-tag">Snakemake (Learning)</span>
                         </div>
+
                     </div>
 
                 </div>
             </div>
 
-            <!-- CERTIFICATIONS - gold -->
+
+            <!-- CERTIFICATIONS -->
             <div class="section sec-gold">
-                <div class="section-header"><i class="fas fa-certificate"></i> Certifications</div>
+
+                <div class="section-header">
+                    <i class="fas fa-certificate"></i>
+                    Certifications
+                </div>
+
                 <div class="section-body">
+
+
+                    <!-- BIOINFORMATICS CERTIFICATE -->
                     <div class="cert-card">
-                        <div class="cert-title">Bioinformatics Summer Internship</div>
-                        <div class="cert-sub">Biotechshalaa · June 2026 · Online · 4 Weeks</div>
-                        <div class="cert-no">Certificate No: BTS/BSI/2606/031</div>
-                        <p class="cert-note">Completed structured training in biological databases, BLAST, MSA, phylogenetics, and protein characterisation. Achieved <strong>100/100</strong> on the final capstone project (HBB Gene Analysis).</p>
+
+                        <div class="cert-title">
+                            Bioinformatics Summer Internship
+                        </div>
+
+                        <div class="cert-sub">
+                            Biotechshalaa · June 2026 · Online · 4 Weeks
+                        </div>
+
+                        <div class="cert-no">
+                            Certificate No: BTS/BSI/2606/031
+                        </div>
+
+                        <p class="cert-note">
+                            Completed structured practical training in
+                            biological databases, BLAST, multiple sequence
+                            alignment, phylogenetics, and protein
+                            characterisation.
+                        </p>
+
                     </div>
+
+
+                    <!-- PYTHON CERTIFICATE -->
+                    <div class="cert-card">
+
+                        <div class="cert-title">
+                            Python & Data Science Internship
+                        </div>
+
+                        <div class="cert-sub">
+                            Practical Internship · July 2026
+                        </div>
+
+                        <p class="cert-note">
+                            Completed intensive practical training in Python,
+                            NumPy, Pandas, Matplotlib, and Biopython, with
+                            applications in biological data processing,
+                            DNA sequence analysis, and data visualization.
+                        </p>
+
+                    </div>
+
                 </div>
             </div>
 
-            <!-- WORK EXPERIENCE - purple -->
+
+            <!-- WORK EXPERIENCE -->
             <div class="section sec-purple">
-                <div class="section-header"><i class="fas fa-briefcase"></i> Work Experience</div>
+
+                <div class="section-header">
+                    <i class="fas fa-briefcase"></i>
+                    Work Experience
+                </div>
+
                 <div class="section-body">
+
                     <div class="work-card">
-                        <div class="work-title">Census Enumerator</div>
-                        <div class="work-sub">Zambia Statistics Agency (ZamStats) · 2022 Population & Housing Census</div>
+
+                        <div class="work-title">
+                            Census Enumerator
+                        </div>
+
+                        <div class="work-sub">
+                            Zambia Statistics Agency (ZamStats) ·
+                            2022 Population & Housing Census
+                        </div>
+
                         <ul class="work-list">
-                            <li>Digital household data collection under national data integrity protocols</li>
-                            <li>Community engagement and high-quality survey response maintenance</li>
-                            <li>Independent field work under structured national protocols</li>
+                            <li>
+                                Digital household data collection under
+                                national data collection protocols
+                            </li>
+
+                            <li>
+                                Community engagement and accurate survey
+                                response collection
+                            </li>
+
+                            <li>
+                                Independent field work under structured
+                                national procedures
+                            </li>
                         </ul>
+
                     </div>
+
                 </div>
             </div>
 
-            <!-- CORE COMPETENCIES - crimson -->
+
+            <!-- CORE COMPETENCIES -->
             <div class="section sec-crimson">
-                <div class="section-header"><i class="fas fa-star"></i> Core Competencies</div>
+
+                <div class="section-header">
+                    <i class="fas fa-star"></i>
+                    Core Competencies
+                </div>
+
                 <div class="section-body">
+
                     <div class="comp-tags">
-                        <span class="comp-tag">Genomic Surveillance</span>
-                        <span class="comp-tag">Pipeline Development</span>
-                        <span class="comp-tag">NGS Analysis</span>
+
+                        <span class="comp-tag">Bioinformatics</span>
+                        <span class="comp-tag">Genomic Data Analysis</span>
+                        <span class="comp-tag">Sequence Analysis</span>
+                        <span class="comp-tag">Python Programming</span>
+                        <span class="comp-tag">Data Analysis</span>
+                        <span class="comp-tag">NGS Workflows</span>
                         <span class="comp-tag">AI Integration</span>
-                        <span class="comp-tag">One Health</span>
-                        <span class="comp-tag">Reproducible Research</span>
                         <span class="comp-tag">Technical Writing</span>
                         <span class="comp-tag">Problem Solving</span>
                         <span class="comp-tag">Leadership</span>
+
                     </div>
+
                 </div>
             </div>
 
-            <!-- REFERENCES - teal -->
+
+            <!-- REFERENCES -->
             <div class="section sec-teal">
-                <div class="section-header"><i class="fas fa-users"></i> References</div>
+
+                <div class="section-header">
+                    <i class="fas fa-users"></i>
+                    References
+                </div>
+
                 <div class="section-body">
+
+
                     <div class="ref-card">
-                        <div class="ref-name">Mr I. Mutwamo</div>
-                        <div class="ref-role">Class Teacher · St. Columba's Secondary School</div>
-                        <div class="ref-contact"><i class="fas fa-phone" style="font-size:0.72rem;"></i> 0976812943</div>
+
+                        <div class="ref-name">
+                            Mr I. Mutwamo
+                        </div>
+
+                        <div class="ref-role">
+                            Class Teacher · St. Columba's Secondary School
+                        </div>
+
+                        <div class="ref-contact">
+                            <i class="fas fa-phone"
+                               style="font-size:0.72rem;"></i>
+                            0976812943
+                        </div>
+
                     </div>
+
+
                     <div class="ref-card">
-                        <div class="ref-name">Olivia Chisha</div>
-                        <div class="ref-role">External Relations & Alumni Officer · The Copperbelt University</div>
-                        <div class="ref-contact"><i class="fas fa-envelope" style="font-size:0.72rem;"></i> olivia.chisha@cbu.ac.zm</div>
+
+                        <div class="ref-name">
+                            Olivia Chisha
+                        </div>
+
+                        <div class="ref-role">
+                            External Relations & Alumni Officer ·
+                            The Copperbelt University
+                        </div>
+
+                        <div class="ref-contact">
+                            <i class="fas fa-envelope"
+                               style="font-size:0.72rem;"></i>
+                            olivia.chisha@cbu.ac.zm
+                        </div>
+
                     </div>
+
                 </div>
             </div>
 
         </div>
+
     </div>
+
 
     <!-- FOOTER -->
     <footer>
-        <p style="margin-bottom:8px; font-weight:600; color:rgba(255,255,255,0.9);">
-            Emmanuel Simunomba &nbsp;·&nbsp; BSc Bioinformatics &nbsp;·&nbsp; The Copperbelt University &nbsp;·&nbsp; Zambia
+
+        <p style="margin-bottom:8px;
+                  font-weight:600;
+                  color:rgba(255,255,255,0.9);">
+
+            Emmanuel Simunomba
+            &nbsp;·&nbsp;
+            BSc Bioinformatics
+            &nbsp;·&nbsp;
+            The Copperbelt University
+            &nbsp;·&nbsp;
+            Zambia
+
         </p>
+
         <p>
-            <a href="mailto:emmanuelsimunomba0@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-            <a href="https://www.linkedin.com/in/emmanuel-simunomba0" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://github.com/EmmanuelSimunomba" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="#" onclick="window.print(); return false;"><i class="fas fa-print"></i> Print</a>
+
+            <a href="mailto:emmanuelsimunomba0@gmail.com">
+                <i class="fas fa-envelope"></i>
+                Email
+            </a>
+
+            <a href="https://www.linkedin.com/in/emmanuel-simunomba0"
+               target="_blank">
+                <i class="fab fa-linkedin"></i>
+                LinkedIn
+            </a>
+
+            <a href="https://github.com/EmmanuelSimunomba"
+               target="_blank">
+                <i class="fab fa-github"></i>
+                GitHub
+            </a>
+
+            <a href="#"
+               class="print-btn"
+               onclick="window.print(); return false;">
+                <i class="fas fa-print"></i>
+                Print CV
+            </a>
+
         </p>
+
     </footer>
 
 </div>
+
 </body>
 </html>
